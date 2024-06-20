@@ -1,6 +1,6 @@
 const bcrypt = require('bcrypt')
 const User = require('../models/user')
-const generateToken = require('../helpers/generateToken')
+const {generate, verify} = require('../helpers/token')
 
 async function register(login, password) {
   if (!password) {
@@ -27,7 +27,7 @@ async function login(login, password) {
     throw new Error('Wrong password')
   }
 
-  const token = generateToken({id: user.id})
+  const token = generate({id: user.id})
 
   return {token, user}
 }

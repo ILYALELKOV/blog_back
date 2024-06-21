@@ -37,6 +37,57 @@ Content-Type: application/json
 DELETE http://localhost:3001/users/6674e5ec2a61bb536a2405af
 Content-Type: application/json
 
+##### request 8
+GET http://localhost:3001/posts
+Content-Type: application/json
+
+##### request 9
+GET http://localhost:3001/posts
+Content-Type: application/json
+
+##### request 10
+GET http://localhost:3001/posts/667506a6ff5cf81f3408f99d
+Content-Type: application/json
+
+##### request 11
+POST http://localhost:3001/posts
+Content-Type: application/json
+
+{
+  "title": "export444 from server!!!!",
+  "imageUrl": "https://example.com/image.jpg",
+  "content": "This is the content of the sample post.",
+  "comments": []
+}
+
+
+##### request 12
+PATCH http://localhost:3001/posts/667506a6ff5cf81f3408f99d
+Content-Type: application/json
+
+{
+"title": "!!!!!------------!!!",
+"imageUrl": "https://example.com/image.jpg",
+"content": "This is the content of the sample post.",
+"comments": []
+}
+
+##### request 13
+DELETE http://localhost:3001/posts/66750b5ac5a5740d088280c5
+Content-Type: application/json
+
+##### request 14
+POST http://localhost:3001/posts/667506a6ff5cf81f3408f99d/comments
+Content-Type: application/json
+
+{
+  "content": "test comment!"
+}
+
+##### request 15
+POST http://localhost:3001/posts/667506a6ff5cf81f3408f99d/comments/667518d80eb0da0f6e1caee5
+Content-Type: application/json
+
 
 
 

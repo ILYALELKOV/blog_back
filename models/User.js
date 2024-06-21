@@ -13,10 +13,10 @@ const UserSchema = mongoose.Schema({
   },
   role: {
     type: Number,
-    default: roles.USER
+    default: roles.MODERATOR
   }
 }, {timestamps: true})
 
-const User = mongoose.model('User', UserSchema)
+const User = mongoose.models.User || mongoose.model('User', UserSchema);
 
 module.exports = User

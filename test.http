@@ -1,17 +1,43 @@
-#POST http://localhost:3001/register
-#Content-Type: application/json
-#
-#{
-#  "login": "test2",
-#  "password": "test"
-#}
+##### request 1
+POST http://localhost:3001/register
+Content-Type: application/json
 
+{
+  "login": "moderator",
+  "password": "test"
+}
+
+
+##### request 2
 POST http://localhost:3001/login
 Content-Type: application/json
 
 {
-"login": "test",
+"login": "test2",
 "password": "test"
 }
+
+##### request 4
+GET http://localhost:3001/users
+Content-Type: application/json
+
+##### request 5
+GET http://localhost:3001/users/roles
+Content-Type: application/json
+
+##### request 6
+PATCH http://localhost:3001/users/6674e5ec2a61bb536a2405af
+Content-Type: application/json
+
+{
+  "roleId": 2
+}
+
+##### request 7
+DELETE http://localhost:3001/users/6674e5ec2a61bb536a2405af
+Content-Type: application/json
+
+
+
 
 
